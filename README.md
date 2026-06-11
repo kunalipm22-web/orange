@@ -1,72 +1,75 @@
 # 🏦 Loan Approval Prediction using Orange Data Mining
 
-### Machine Learning | Logistic Regression | Banking Analytics
+### Machine Learning • Logistic Regression • Banking Analytics • Classification Modeling
 
 ---
 
 ## 📌 Project Overview
 
-This project predicts whether a loan application will be approved or rejected using Logistic Regression in Orange Data Mining.
+This project predicts whether a loan application will be approved or rejected using **Logistic Regression** in **Orange Data Mining**.
 
-The model analyzes customer demographic and financial information and classifies applicants into approved or rejected categories.
+The model analyzes customer demographic and financial information and classifies applicants into approved or rejected categories. The project demonstrates how machine learning can support banking and credit risk decision-making.
 
 ---
 
 ## 🎯 Objectives
 
 - Predict loan approval status
-- Apply Logistic Regression
+- Analyze customer creditworthiness
+- Apply Logistic Regression for classification
 - Evaluate model performance
 - Support banking decision-making
-- Demonstrate machine learning concepts
+- Demonstrate machine learning using Orange Data Mining
 
 ---
 
 ## 📊 Dataset Description
 
-The dataset contains customer loan application information.
+The dataset contains loan applicant information.
 
-### Input Features
+### Input Features (Independent Variables)
 
-- Gender
-- Age
-- Married
-- Dependents
-- Education
-- Self Employed
-- Income
-- Coapplicant Income
-- Loan Amount
-- Loan Term
-- Credit History
-- Property Area
-- Employment Years
+| Feature | Description |
+|----------|------------|
+| Gender | Male or Female |
+| Age | Customer Age |
+| Married | Marital Status |
+| Dependents | Number of Dependents |
+| Education | Graduate / Not Graduate |
+| Self_Employed | Employment Status |
+| Income | Customer Income |
+| Coapplicant_Income | Co-applicant Income |
+| Loan_Amount | Requested Loan Amount |
+| Loan_Term | Loan Duration |
+| Credit_History | Credit Record |
+| Property_Area | Urban / Semiurban / Rural |
+| Employment_Years | Work Experience |
 
-### Target Variable
+### Target Variable (Dependent Variable)
 
-**Loan_Approved**
-
-- 1 = Approved
-- 0 = Rejected
+| Variable | Meaning |
+|-----------|---------|
+| Loan_Approved = 1 | Loan Approved |
+| Loan_Approved = 0 | Loan Rejected |
 
 ---
 
-## 🏗 Workflow in Orange
+## 🏗 Orange Workflow
 
-### Step 1: Load Dataset
+### Step 1 — Load Dataset
 Import the CSV dataset using the File widget.
 
-### Step 2: Select Target Variable
-Use Select Columns and move Loan_Approved to Target.
+### Step 2 — Select Target Variable
+Use Select Columns and move Loan_Approved to the Target section.
 
-### Step 3: Train Model
+### Step 3 — Train Model
 Apply Logistic Regression.
 
-### Step 4: Evaluate Model
-Use Test & Score widget with Cross Validation.
+### Step 4 — Evaluate Model
+Connect Test & Score widget.
 
-### Step 5: Analyze Results
-Review Accuracy, AUC, Precision, Recall, F1 Score, and MCC.
+### Step 5 — Cross Validation
+Perform model validation and generate evaluation metrics.
 
 ---
 
@@ -76,7 +79,7 @@ Review Accuracy, AUC, Precision, Recall, F1 Score, and MCC.
 
 The workflow loads the dataset, selects the target variable, trains a Logistic Regression model, and evaluates performance using Test & Score.
 
-<img src="assets/orange-workflow.png" width="900">
+<img src="https://raw.githubusercontent.com/kunalipm22-web/orange/main/orange-workflow.png.png" width="900">
 
 ---
 
@@ -84,7 +87,7 @@ The workflow loads the dataset, selects the target variable, trains a Logistic R
 
 Performance metrics generated using Orange Test & Score widget.
 
-<img src="assets/orange-test-score-results.png" width="900">
+<img src="https://raw.githubusercontent.com/kunalipm22-web/orange/main/orange-test-score-results.png.png" width="900">
 
 ---
 
@@ -119,8 +122,8 @@ based on customer financial information.
 ## 🔍 Interpretation
 
 - The model provides moderate predictive performance.
-- Credit history significantly influences loan approval.
-- Logistic Regression offers a simple and interpretable solution.
+- Credit history significantly influences loan approval decisions.
+- Logistic Regression provides an interpretable classification approach.
 - The model can support preliminary loan screening.
 
 ---
@@ -130,9 +133,10 @@ based on customer financial information.
 Banks can use this model to:
 
 - Reduce risky lending decisions
-- Improve approval efficiency
+- Improve loan approval efficiency
 - Support credit risk assessment
-- Automate customer screening
+- Automate initial customer screening
+- Improve operational productivity
 
 ---
 
@@ -140,32 +144,32 @@ Banks can use this model to:
 
 - Moderate accuracy
 - Limited dataset size
-- May not capture complex relationships
+- Logistic Regression may not capture complex patterns
+- Additional features may improve performance
 
 ---
 
-## 🛠 Tools Used
+## 🛠 Tools & Technologies
 
-| Tool | Purpose |
-|--------|----------|
-| Orange Data Mining | Machine Learning |
-| Logistic Regression | Classification |
+| Technology | Purpose |
+|------------|----------|
+| Orange Data Mining | Machine Learning Platform |
+| Logistic Regression | Classification Model |
 | CSV Dataset | Data Source |
-| Test & Score | Evaluation |
+| Cross Validation | Model Evaluation |
+| Banking Analytics | Business Application |
 
 ---
 
 ## 📂 Repository Structure
 
 ```text
-Loan-Approval-Prediction/
+orange/
 │
 ├── README.md
 ├── loan_approval_dataset_100_rows.csv
-│
-└── assets/
-    ├── orange-workflow.png
-    └── orange-test-score-results.png
+├── orange-workflow.png.png
+└── orange-test-score-results.png.png
 ```
 
 ---
@@ -173,13 +177,25 @@ Loan-Approval-Prediction/
 ## 🚀 How to Run
 
 1. Open Orange Data Mining
-2. Import dataset using File widget
+2. Load the dataset using File widget
 3. Add Select Columns widget
 4. Set Loan_Approved as Target
 5. Add Logistic Regression
 6. Add Test & Score
 7. Run Cross Validation
-8. Analyze results
+8. Analyze model performance
+
+---
+
+## 📈 Future Improvements
+
+- Decision Tree Classifier
+- Random Forest Classifier
+- XGBoost Model
+- Larger Dataset
+- Feature Engineering
+- Hyperparameter Tuning
+- Banking Risk Dashboard
 
 ---
 
@@ -189,6 +205,6 @@ Loan-Approval-Prediction/
 
 MBA (Applied Finance)
 
-Machine Learning • Banking Analytics • Risk Analytics
+Machine Learning • Banking Analytics • Risk Analytics • Data Science
 
 ⭐ If you found this project useful, consider giving it a star.
